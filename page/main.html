@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf App</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="bg-content">
+        <div class="child-bg-content"></div>
+    </div>
+    <div class="content">
+        <div class="card">
+            <div class="user">
+                <img src="../asset/user.jpg" alt="">
+            </div>
+            <h1 id="greeting"></h1>
+            <div class="jumlah-buku">
+                <p>Jumlah Buku :</p>
+                <h2 id="jumlahBuku">20</h2>
+            </div>
+        </div>
+        <div class="action">
+            <div class="add-book" id="add-book">
+                <h5>tambahkan buku +</h5>
+            </div>
+        </div>
+        <div class="book-table">
+            <div class="unread" id="unread">
+                <h4 class="">Belum Dibaca</h4>
+            </div>
+            <div class="read" id="read">
+                <h4>Sudah Dibaca</h4>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal">
+        <div class="container-modal">
+            <div class="card-modal">
+                <h2>Tambahkan Buku Baru</h2>
+                <form id="form">
+                    <div class="input-group">
+                        <input type="text" id="title" placeholder="Judul Buku" class="input-form"
+                            maxlength="120" pattern="^[a-zA-Z0-9_ ]*$" required />
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="author" placeholder="Penulis" class="input-form"
+                            maxlength="60" pattern="^[a-zA-Z0-9_ ]*$" required />
+                    </div>
+                    <div class="input-group">
+                        <input type="date" id="year" 
+                            class="input-form" min="1900" max="2026" />
+                    </div>
+                    <div class="button-group">
+                        <button type="reset" class="close" id="close">Close</button>
+                        <button type="submit" id="save">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../penyimpanan.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>
