@@ -3,6 +3,7 @@ function simpanNama(){
 
     if(!localStorage.getItem('namaPengguna') && namaPengguna === ""){
         alert("Silahkan isi nama untuk melanjutkan")
+        return;
     }
     else if(!localStorage.getItem('namaPengguna') ){
         localStorage.setItem('namaPengguna', namaPengguna);
