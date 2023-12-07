@@ -17,7 +17,7 @@ const addBook = () => {
     const uncompletedBook = document.getElementById(UNCOMPLETED_BOOK_ID);
     const inputTitle = document.getElementById('title').value;
     const inputAuthor = document.getElementById('author').value;
-    const inputYear = document.getElementById('year').value;
+    const inputYear = parseInt(document.getElementById('year').value);
     
     const book = makeBook(inputTitle, inputAuthor, inputYear, false)
     const bookObject = composeBookObject(inputTitle, inputAuthor, inputYear, false)

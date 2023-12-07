@@ -49,10 +49,16 @@
                         <input type="text" id="author" placeholder="Penulis" class="input-form"
                             maxlength="60" pattern="^[a-zA-Z0-9_ ]*$" required />
                     </div>
-                    <div class="input-group">
-                        <input type="date" id="year" 
-                            class="input-form" min="1900" max="2026" />
-                    </div>
+                   
+                    <select id="year" class="input-form">
+                        <option value="">Pilih Tahun</option>
+                        <!-- Daftar tahun dari 1900 hingga 2026 -->
+                        <script>
+                            for (let i = 1900; i <= 2026; i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
                     <div class="button-group">
                         <button type="reset" class="close" id="close">Close</button>
                         <button type="submit" id="save">Save</button>
